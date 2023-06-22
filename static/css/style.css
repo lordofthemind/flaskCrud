@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table-cell {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.action-cell {
+    text-align: center;
+}
+
+.delete-link {
+    color: red;
+    margin-right: 10px;
+}
+
+.update-link {
+    color: blue;
+}
+
+.form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-submit {
+    background-color: #2196f3;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #1976d2;
+}

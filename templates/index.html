@@ -1,0 +1,44 @@
+{% extends '_base.html' %}
+
+{% block title %}
+
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="content">
+    <h1 class="heading">Task Master</h1>
+
+    {% if tasks|length < 1 %} <h1>There is no task, Create one below.</h1>
+
+        {% else %}
+
+        <table class="table">
+            <tr>
+                <th class="table-header">Tasks</th>
+                <th class="table-header">Added</th>
+                <th class="table-header">Action</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td class="table-cell">{{ task.content }}</td>
+                <td class="table-cell">{{ task.created.date() }}</td>
+                <td class="table-cell action-cell">
+                    <a href="/delete/{{ task.id }}" class="delete-link">Delete</a>
+                    <br>
+                    <a href="/update/{{ task.id }}" class="update-link">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+</div>
+<div class="content">
+    <form class="form" action="/" method="POST">
+        <input class="form-input" type="text" name="content" id="content">
+        <input class="form-submit" type="submit" value="Add Task">
+    </form>
+</div>
+{% endblock %}
